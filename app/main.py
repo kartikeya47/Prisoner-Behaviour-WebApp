@@ -14,10 +14,11 @@ def index():
 def submit():
     if request.method == "POST":
         
-        nature = request.form.get('nature')
-        fight = request.form.get('fight')
-        cook = request.form.get('cook')
-        clean = request.form.get('clean')
+        nature = request.form['nature']
+        fight = request.form['fight']
+        cook = request.form['cook']
+        clean = request.form['clean']
+        
         model = pickle.load(open('app/model', 'rb'))
         
         li = []
