@@ -18,7 +18,7 @@ def submit():
         fight = request.form.get('fight')
         cook = request.form.get('cook')
         clean = request.form.get('clean')
-        model = pickle.load(open('app\\model', 'rb'))
+        model = pickle.load(open('app/model', 'rb'))
         
         li = []
         
