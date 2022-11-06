@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Predict the Behaviour</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="{{ url_for('static', filename = 'assets/css/style.css')}}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<form action="/submit" method="post">
+
+      Nature of the Prisoner: <input type="text" name="nature" id="nature"> <br><br>
+      Does the Prisoner fight with other inmates: <input type="text" name="fight" id="fight"> <br><br>
+      Does the Prisoner cook food: <input type="text" name="cook" id="cook"> <br><br>
+      Does the Prisoner clean toilets: <input type="text" name="clean" id="clean"> <br><br>
+      <button type="submit">Predict the Behaviour</button> 
+
+</form>
+
+  <script src="{{ url_for('static', filename = 'assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
