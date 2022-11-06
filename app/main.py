@@ -49,5 +49,16 @@ def submit():
         
         listt = [li]
         result = model.predict(listt)
+        
+        res = 'str'
+        
+        if result[0] == 0:
+            res = 'The Prisoner has Worst Behaviour'
+        elif result[0] == 1:
+            res = 'The Prisoner has Average Behaviour'
+        elif result[0] == 2:
+            res = 'The Prisoner has Good Behaviour'
+        else:
+            res = "Unknown Error"
     
-    return render_template('output.html', result=result, listt=listt)
+    return render_template('output.html', result=res)
