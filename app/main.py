@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect
 import os
 import pickle
 from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
 
 app = Flask(__name__)
 
@@ -19,7 +18,7 @@ def submit():
         fight = request.form.get('fight')
         cook = request.form.get('cook')
         clean = request.form.get('clean')
-        model = pickle.load(open('app\model', 'rb'))
+        model = pickle.load(open('app\\model', 'rb'))
         
         li = []
         
