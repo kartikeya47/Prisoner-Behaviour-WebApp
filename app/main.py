@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request, redirect
-import os
 import pickle
-from sklearn.ensemble import RandomForestClassifier
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
